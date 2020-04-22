@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "ec2:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+      {
+            "Action": "ec2:DeleteVolume",
+            "Effect": "Deny",
+            "Resource":
+             "arn:aws:ec2:ap-south-1a:509016301386:volume/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:Region": "ap-south-1a"
+                    }
+         }    
+        }
+        ]
+      }
